@@ -43,12 +43,12 @@
   
   .contenedor-testimonio {
       width: 80%;
-      height: max-content;
+      height: 200px;
   }
   
   .imagen-testimonio {
-    height: auto;
-    width: 100px;
+    height: 100%;
+    width: 130px;
   }
 
   .contenedor-texto-testimonio {
@@ -57,15 +57,15 @@
   }
 
   .nombre-testimonio {
-    font-size: 0.4rem;
+    font-size: 0.5rem;
   }
   .cargo-testimonio {
-    font-size: 0.4rem;
-    padding-bottom:0px;
+    font-size: 0.5rem;
+    padding-bottom:7px;
     margin-top: 7px;
   }
   .texto-testimonio {
-    font-size: 0.2rem;
+    font-size: 0.4rem;
   }
   
 }

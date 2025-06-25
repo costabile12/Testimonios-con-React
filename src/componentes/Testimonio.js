@@ -1,6 +1,13 @@
 import React from "react";
 import '../hojas-de-estilo/Testimonio.css'
 
+function resaltarPalabras(texto, palabrasResaltadas) {
+  const partes =texto.split(new RegExp(`(${palabrasResaltadas.join('|')})`, 'gi'));
+  return partes.map((parte, i) =>
+    palabrasResaltadas.some(p => p.toLowerCase() === parte.toLowerCase()) ? <strong key={i}>{parte}</strong> : parte);
+}
+
+
 function Testimonio(props) {
   return(
     <div className="contenedor-testimonio">
@@ -17,7 +24,7 @@ function Testimonio(props) {
         </p>
 
         <p className="texto-testimonio">
-          "{props.testimonio}"
+          "{resaltarPalabras(props.testimonio, ['freeCodeCamp me cambió la vida', 'fue la puerta de entrada a mi carrera', 'freeCodeCamp, me dio las habilidades'])}"
         </p>
 
       </div>
